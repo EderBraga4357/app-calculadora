@@ -1,0 +1,28 @@
+.container-fluid {
+  margin-top: 30px; /* Ajuste o valor conforme necessário */
+}
+
+.kz-btn {
+  width: 90%;
+  margin: 4px;
+}
+.kz-input-text {
+  margin-top: 3px;
+  width:96%;
+  margin-left:6px
+}
+.kz-pad-20 {
+  padding: 20px;
+}
+.col-xs-3, .col-xs-9 {
+  padding: 0px;
+}
+
+.btn-custom {
+  background-color: #5bc0de; /* Azul claro */
+  color: white; /* Cor do texto */
+}
+
+.btn-custom:hover {
+  background-color: #31b0d5; /* Tom mais escuro ao passar o mouse */
+}
