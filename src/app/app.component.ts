@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {CalculadoraModule} from "./calculadora/calculadora.module";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CalculadoraModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
