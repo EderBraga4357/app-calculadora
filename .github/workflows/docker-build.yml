@@ -21,8 +21,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ederbraga/calculadora:${{ github.ref }} .
+          TAG_NAME=${{ github.ref }}
+          # Extrai o nome da tag removendo 'refs/tags/'
+          TAG_NAME=${TAG_NAME#refs/tags/}
+          docker build -t ederbraga/calculadora:${TAG_NAME} .
 
       - name: Push Docker image
         run: |
-          docker push ederbraga/calculadora:${{ github.ref }}
+          TAG_NAME=${{ github.ref }}
+          TAG_NAME=${TAG_NAME#refs/tags/}
+          docker push ederbraga/calculadora:${TAG_NAME}
