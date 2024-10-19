@@ -1,0 +1,28 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Executa para qualquer tag que comece com 'v'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.ederbraga }}
+          password: ${{ secrets.Hcr@43579 }}
+
+      - name: Build Docker image
+        run: |
+          docker build -t ederbraga/calculadora:${{ github.ref }} .
+
+      - name: Push Docker image
+        run: |
+          docker push ederbraga/calculadora:${{ github.ref }}
