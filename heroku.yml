@@ -1,6 +1,5 @@
 build:
   docker:
-    web: ederbraga/app-calculadora:v1.0.3
-
+    web: Dockerfile  # Certifique-se de que isso está correto
 run:
-  web: npm start
+  web: npm start  # ou outro comando que inicie sua aplicação
