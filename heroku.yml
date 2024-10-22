@@ -1,0 +1,3 @@
+build:
+  docker:
+    web: ederbraga/calculadora:v1.0.3
