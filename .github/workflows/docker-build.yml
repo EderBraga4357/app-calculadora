@@ -45,6 +45,9 @@ jobs:
           echo "  password $HEROKU_API_KEY" >> ~/.netrc
           chmod 600 ~/.netrc
 
+          # Faça login no Docker Registry do Heroku
+          echo $HEROKU_API_KEY | docker login --username=_ --password-stdin registry.heroku.com
+
           # Configure a stack do Heroku para container
           heroku stack:set container --app ${{ secrets.HEROKU_APP_NAME }}
 
